@@ -1,0 +1,4 @@
+colorama==0.4.6
+numpy==2.2.1
+opencv-python==4.10.0.84
+tqdm==4.67.1
