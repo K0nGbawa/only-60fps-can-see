@@ -1,8 +1,15 @@
 import cv2
 import numpy as np
 import tqdm
+import sys
 
-input_video = cv2.VideoCapture('input.mp4')
+if len(sys.argv) != 2:
+    print("Usage: python main.py <input_video_path>")
+    sys.exit(1)
+
+input_path = sys.argv[1]
+
+input_video = cv2.VideoCapture(input_path)
 
 width = int(input_video.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(input_video.get(cv2.CAP_PROP_FRAME_HEIGHT))
@@ -20,7 +27,6 @@ while input_video.isOpened():
     output_video.write(np.zeros((height, width, 3), dtype=np.uint8))
     output_video.write(frame)
     bar.update(1)
-
 
 input_video.release()
 output_video.release()
