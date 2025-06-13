@@ -14,7 +14,7 @@
 在命令行中运行：
 
 ```cmd
-python main.py input.mp4 
+python main.py <输入视频路径>
 ```
 
 示例：
