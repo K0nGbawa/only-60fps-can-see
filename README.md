@@ -5,8 +5,10 @@
 在命令行中运行：
 
 `video_tool.exe <输入视频路径>`
+
 示例：
 
 `video_tool.exe "D:\视频\input.mp4"`
+
 程序会开始处理视频，并显示进度条。
 处理完成后，会在程序根目录生成一个 output.avi 文件。
